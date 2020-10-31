@@ -24,7 +24,8 @@ app.post("/form", (req, res) => {
 
   /* OBJET DATA */
   const data = {
-    from: `${req.fields.firstName} ${req.fields.lastame} <${req.fields.email}> `, //"Mailgun Sandbox <postmaster@sandboxc3cbac11a9724b7eb40e3c2e6bd90ca3.mailgun.org>"
+    from:
+      "Mailgun Sandbox <postmaster@sandboxc3cbac11a9724b7eb40e3c2e6bd90ca3.mailgun.org>", //"Mailgun Sandbox <postmaster@sandboxc3cbac11a9724b7eb40e3c2e6bd90ca3.mailgun.org>"
     to: "claire.lcnt@gmail.com",
     subject: "Hello from Contact Form",
     text: `Hello ${req.fields.firstName} ${req.fields.lastName}, we received your request ! `,
